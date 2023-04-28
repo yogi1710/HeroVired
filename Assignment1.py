@@ -1,0 +1,10 @@
+print("Introduction to Python Programming - Rs.499.00")
+print("Python Libraries Cookbook - Rs.855.00")
+print("Data Science in Python - Rs.645.00 \n")
+Book1 = int(input("How many Introduction to Python Programming books do you want : "))
+Book2 = int(input("How many Python Libraries Cookbook books do you want : "))
+Book3 = int(input("How many Data Science in Python books do you want : "))
+Sum = (Book1*499.00) + (Book2*855.00) + (Book3*645.00)
+With_GST = Sum + (Sum*0.12)
+Amount = With_GST + 255.00
+print("Amount to be paid : ",Amount)
