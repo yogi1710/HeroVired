@@ -16,16 +16,19 @@ Answer 1 -
 print("Introduction to Python Programming - Rs.499.00")
 print("Python Libraries Cookbook - Rs.855.00")
 print("Data Science in Python - Rs.645.00 \n")
-Book1 = int(input("How many Introduction to Python Programming books do you want : "))
-Book2 = int(input("How many Python Libraries Cookbook books do you want : "))
-Book3 = int(input("How many Data Science in Python books do you want : "))
+Book1 = int(input("How many \'Introduction to Python Programming\' books do you want : "))
+Book2 = int(input("How many \'Python Libraries Cookbook\' books do you want : "))
+Book3 = int(input("How many \'Data Science in Python\' books do you want : "))
 Sum = (Book1*499.00) + (Book2*855.00) + (Book3*645.00)
 With_GST = Sum + (Sum*0.12)
-Amount = With_GST + 255.00
-print("Amount to be paid : ",Amount)
+if With_GST != 0:
+    Amount = With_GST + 250.00
+    print("Total Amount : ",Amount)
+else:
+    print("Total Amount : ",0)
 
 
-_____________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________________________________________
 
 Question 2 - 
 ------------
@@ -43,12 +46,12 @@ Answer 2 -
 ----------
 
 variable_name = input("Enter the string : ")
+print("Input : string1 = ",variable_name)
 my_string = variable_name.lower()
-letters = []
-for i in range(len(my_string)):
-    if my_string[i] not in letters:
-        letters.append(my_string[i])
-    else:
-        continue
-for value in range(len(letters)):
-    print(letters[value],end = ",")
+letters = ""
+for letter in range(len(my_string)):
+    if my_string[letter] not in letters:
+        letters = letters + my_string[letter] + ","
+print("Output : uniqueLetters = ",end="")
+for value in range(len(letters)-1):
+    print(letters[value],end="")
