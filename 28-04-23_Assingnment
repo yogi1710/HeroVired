@@ -45,6 +45,21 @@ Output : uniqueLetters = d,e,i,c,a,t,o,n
 Answer 2 -
 ----------
 
+
+variable_name = input("Enter the string : ")
+my_string = variable_name.lower()
+letters = []
+for i in range(len(my_string)):
+    if my_string[i] not in letters:
+        letters.append(my_string[i])
+print("Output : uniqueLetters = ",end="")
+Result = ','.join(letters)
+print(Result)
+
+
+                    (or)
+                    
+                    
 variable_name = input("Enter the string : ")
 print("Input : string1 = ",variable_name)
 my_string = variable_name.lower()
